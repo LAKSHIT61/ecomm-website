@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CleanCut — Beauty, Simplified</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="announcement">
+  <span>🚚 Free shipping on orders above ₹999</span>
+  <span>🌿 100% Authentic Products</span>
+  <span>✦ Easy Returns</span>
+  <span>✦ Beauty, Simplified.</span>
+</div>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="logo-wrap" href="index.html"><span class="logo">CleanCut</span><span class="logo-sub">Beauty, Simplified.</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop⌄</a></li>
+        <li><a href="shop.html?category=skincare">Skincare⌄</a></li>
+        <li><a href="shop.html?category=beauty">Beauty⌄</a></li>
+        <li><a href="shop.html?category=tools">Tools⌄</a></li>
+        <li><a href="shop.html">Offers</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <form class="header-search" action="shop.html"><input name="q" type="search" placeholder="Search for products, brands, or concerns..."><button aria-label="Search">⌕</button></form>
+      <a class="icon-btn" href="login.html" aria-label="Account">♙</a>
+      <a class="icon-btn" href="profile.html" aria-label="Wishlist">♡</a>
+      <a class="icon-btn cart-link" href="cart.html" aria-label="Cart">🛍<span class="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <span>✦ Clean beauty, made simple.</span>
+      <h1>Glow Naturally<br>Everyday <span style="font-size:.55em;letter-spacing:0;color:#6f9b60">🌿</span></h1>
+      <p>Skincare and beauty products that fit your lifestyle. Clean, effective and made for real results.</p>
+      <div class="hero-buttons"><a href="shop.html" class="btn btn-primary">Shop Now&nbsp; →</a></div>
+      <div class="hero-benefits">
+        <div class="hero-benefit"><strong>♧</strong><span>Clean &amp; Safe<br>Ingredients</span></div>
+        <div class="hero-benefit"><strong>♡</strong><span>Dermatologist<br>Approved</span></div>
+        <div class="hero-benefit"><strong>▣</strong><span>Free Shipping<br>above ₹999</span></div>
+      </div>
+    </div>
+    <div class="hero-image"><img src="assets/images/hero.jpg" alt="CleanCut skincare collection with model and beauty products"></div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+<div class="container">
+  <div class="section-header"><div><h2>Shop by category</h2><p>Find what fits your routine.</p></div></div>
+  <div class="categories">
+    <a href="shop.html?category=skincare" class="category" style="background-image:url(assets/images/category-skincare.jpg)"><h3>Skincare</h3></a>
+    <a href="shop.html?category=beauty" class="category" style="background-image:url(assets/images/category-beauty.jpg)"><h3>Beauty</h3></a>
+    <a href="shop.html?category=tools" class="category" style="background-image:url(assets/images/category-tools.jpg)"><h3>Tools</h3></a>
+    <a href="shop.html?category=accessories" class="category" style="background-image:url(assets/images/category-accessories.jpg)"><h3>Accessories</h3></a>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="section-header"><div><h2>Best sellers</h2><p>Customer favourites, loved for real routines.</p></div><a href="shop.html">View all →</a></div>
+  <div class="products" id="featured-products"></div>
+</div>
+</section>
+
+<section class="ai-section">
+<div class="container ai-content">
+  <div><h2>Not sure what you need?</h2><p>Ask our AI beauty assistant. Tell us what you're looking for and we'll help you find the right products.</p></div>
+  <div class="ai-box">
+    <input id="ai-input" class="ai-input" type="text" placeholder="Ask CleanCut AI...">
+    <button id="ai-button" class="ai-button">Ask AI →</button>
+    <div id="ai-response" class="ai-response"></div>
+  </div>
+</div>
+</section>
+
+<section class="newsletter">
+<div class="container">
+  <h2>Stay in the loop.</h2>
+  <p>Get product launches, offers and beauty tips directly in your inbox.</p>
+  <form class="newsletter-form"><input type="email" placeholder="Your email address" required><button>Subscribe</button></form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-grid">
+  <div class="footer-brand"><h3>CleanCut</h3><p>Beauty and skincare, made simpler.</p></div>
+  <div class="footer-column"><h4>Shop</h4><a href="shop.html?category=skincare">Skincare</a><a href="shop.html?category=beauty">Beauty</a><a href="shop.html?category=tools">Tools</a></div>
+  <div class="footer-column"><h4>Help</h4><a href="contact.html">Contact</a><a href="#">Shipping</a><a href="#">Returns</a><a href="#">FAQs</a></div>
+  <div class="footer-column"><h4>Account</h4><a href="login.html">Login</a><a href="signup.html">Register</a><a href="orders.html">My Orders</a><a href="profile.html">Profile</a></div>
+</div>
+<div class="container copyright">© 2026 CleanCut. All rights reserved.</div>
+</footer>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

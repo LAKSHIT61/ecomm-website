@@ -1,0 +1,6 @@
+document.addEventListener("DOMContentLoaded",()=>{
+ const target=document.getElementById("orders-list");if(!target)return;if(!requireAuth())return;
+ (async()=>{try{const r=await authFetch("/api/orders");const orders=await r.json();if(!r.ok)throw new Error(orders.detail||"Could not load orders");if(!orders.length){target.innerHTML='<div class="empty-state"><h2>No orders yet.</h2><a class="btn btn-primary" href="shop.html">Shop now</a></div>';return;}
+ target.innerHTML=orders.map(o=>`<article class="order-card"><div class="order-head"><strong>Order #${o.order_number}</strong><span>${new Date(o.created_at).toLocaleDateString("en-IN")}</span></div><div class="order-meta"><span>${o.items.length} product(s)</span><strong>${money(o.total)}</strong><span class="status">${o.status}</span></div><div class="order-items">${o.items.map(i=>`<div><img src="${i.image}" alt=""><span>${i.product_name} × ${i.quantity}</span><strong>${money(i.line_total)}</strong></div>`).join("")}</div><small>${o.payment_method.toUpperCase()} · ${o.payment_status} · ${o.city} ${o.pincode}</small></article>`).join("");
+ }catch(e){target.innerHTML=`<div class="empty-state"><h2>Could not load orders.</h2><p>${e.message}</p></div>`;}})();
+});

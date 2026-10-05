@@ -1,0 +1,26 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: cleancut
+      POSTGRES_USER: cleancut
+      POSTGRES_PASSWORD: cleancut
+    ports:
+      - "5432:5432"
+    volumes:
+      - cleancut_pgdata:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://cleancut:cleancut@db:5432/cleancut
+      CORS_ORIGINS: http://localhost:8000,http://127.0.0.1:8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  cleancut_pgdata:
